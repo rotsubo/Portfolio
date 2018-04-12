@@ -19,18 +19,3 @@ $(".button").on("click",function(){
     $(".navContainer").fadeIn(500).animate({"left":0},{duration:2000,queue:false})
   }
 });
-
-//=========
-//スクロール
-//=========
-$(".navbar a[href^='#']").on("click",function(){
-  var speed = 2000;
-  var href = $(this).attr("href");
-  var position = $(href).offset().top;
-  $("html,body").animate({scrollTop:position},"slow","swing");
-});
-//topへ戻る//
-$("footer").on("click",function(){
-  var speed =600;
-  $("html,body").animate({scrollTop:0},"slow","swing");
-});
