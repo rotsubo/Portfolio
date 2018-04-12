@@ -1,0 +1,83 @@
+header{
+  background-image:url(../image/miyazakiDSCF5012_TP_V.jpg);
+  color:whitesmoke;
+  height:150px;
+}
+body{
+  background-color: whitesmoke;
+  width:70%;
+  margin-right:auto;
+  margin-left:auto;
+}
+header>div:first-child{
+  background-color: rgba(255,255,255,0.4);
+  height:100%;
+  position: relative;
+}
+nav{
+  position:absolute;
+  bottom:10px;
+}
+ul{
+  margin:0;
+}
+.menu{
+  display: flex;
+}
+.button {
+  width:40px;
+  height:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color:whitesmoke;
+}
+.button div{
+  height: 3px;
+  width:80%;
+  background-color: whitesmoke;
+  color:whitesmoke;
+}
+/*メニューボタンクリックの動き*/
+/*メニュー表示*/
+@keyframes button-top{
+  0%{transform: rotate(0)}
+  100%{transform: translateY(12px);
+       opacity: 0;}
+}
+@keyframes button-bottom{
+  0%{transform: rotate(0)}
+  100%{transform: translateY(-12px);
+       opacity: 0;}
+}
+/*メニュー非表示*/
+@keyframes button-top-back{
+  0%{transform: rotate(0);
+     margin-top:50%;
+     opacity: (0);
+     }
+  100%{transform: translateY(0);
+       opacity: 1;}
+}
+@keyframes button-bottom-back{
+  0%{transform: rotate(0);
+     margin-bottom:50%;
+     opacity: (0);
+  }
+  100%{transform: translateY(0);
+       opacity: 1;}
+}
+.navContainer{
+  display: none;
+}
+.navbar{
+  display: flex;
+  justify-content: flex-start;
+  color:whitesmoke;
+}
+.navbar li+li{
+  margin-left:50px;
+}
+li{
+  list-style-type: none;
+}
