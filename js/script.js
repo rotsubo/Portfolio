@@ -23,14 +23,26 @@ $(".button").on("click",function(){
 //=========
 //スクロール
 //=========
+//ナビゲーションバー
 $(".navbar a[href^='#']").on("click",function(){
   var speed = 2000;
   var href = $(this).attr("href");
   var position = $(href).offset().top;
   $("html,body").animate({scrollTop:position},"slow","swing");
 });
-//topへ戻る//
-$("footer").on("click",function(){
-  var speed =600;
-  $("html,body").animate({scrollTop:0},"slow","swing");
-});
+//topへ戻る
+$(".backButton").on("click",function(){
+  $("html,body").animate({scrollTop:0},"fast","swing");
+})
+
+
+//=========
+//canvas
+//=========
+var headerWidth = $("header").outerWidth();
+var headerHeight = $("header").outerHeight();
+$("canvas").css("width",headerWidth).css("height",headerHeight);
+
+
+
+

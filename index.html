@@ -9,7 +9,8 @@
 
 </head>
 <body>
-<header>
+<header id="top">
+
  <div>
   <h1>Portfolio</h1>
   <nav>
@@ -24,22 +25,28 @@
   <ul class="navbar">
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   </div>
  </li>
  </ul>
 </nav>
 </div>
+<span></span>
+<canvas id="canvas"></canvas>
 </header>
 
 <div id="main">
 <h2 id="about">About</h2>
-  <div></div>
+  <ul>
+    <li>名前：大坪 龍門(Otsubo Ryumon)</li>
+    <li>所属：株式会社セラク　デジタルサイエンス事業部</li>
+  </ul>
+  <p></p>
 
 
 <h2 id="work">Work</h2>
-<h3>研修課題</h3>
-<h4>架空銀行サイト</h4>
+<h3><span></span>架空銀行サイト</h3>
 <ul class="workSite">
   <li class="workSiteList">
     <a href="seraku-bank/seraku_bank.html"><img src="image/seraku-bank.png" alt="seraku_bank"></a>
@@ -49,20 +56,24 @@
 <ul class="workSite">
   <li class="workSiteList">
     <a href="seraku-bank-ver2/base.html"><img src="image/seraku-bank-ver2.png" alt="seraku_bank_ver2"></a>
-    <p class="workExplain">2作目。</p>
   </li>
+  <li><p class="workExplain">2作目。</p></li>
   </ul>
-
-
 
 </div><!--#mainEND-->
 
+<!--topへ戻るボタン-->
+<div class="backButton"><img src="image/the%20up%20arrow.jpeg" alt="arrow"></div>
 
 <footer>
-  footter
+<h4 id="contact">Contact</h4>
+
+ <p>eMail</p>
+ <p>otsubo@seraku.co.jp</p>
+
 </footer>
 
-<!--scritp-->
+<!--script-->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
