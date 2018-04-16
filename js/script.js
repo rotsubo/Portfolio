@@ -39,9 +39,74 @@ $(".backButton").on("click",function(){
 //=========
 //canvas
 //=========
-var headerWidth = $("header").outerWidth();
-var headerHeight = $("header").outerHeight();
-$("canvas").css("width",headerWidth).css("height",headerHeight);
+
+//画面サイズで分岐
+
+
+//分岐条件
+var lg = window.matchMedia("screen and (min-width:1201px)")
+var xsm = window.matchMedia("screen and (max-width:400px)")
+var sm = window.matchMedia("screen and (max-width:600px) and (min-width:401px)")
+var md = window.matchMedia("screen and (max-width:960px) and (min-width:599px)")
+var mdlg = window.matchMedia("screen and (max-width:1200px) and (min-width:959px)")
+
+
+window.onload = function breakPoint(){
+  function sizeChange(){
+//canvasｻｲｽﾞ変更
+ headerWidth = $("header").outerWidth();
+ headerHeight = $("header").outerHeight();
+ headerMiddleWidth = headerWidth*0.5 ;
+ headerMiddleHeight = headerHeight*0.5 ;
+$("#canvas").attr("width",headerWidth).attr("height",headerHeight);
+}
+  if (canvas.getContext) {
+    if(lg.matches){
+    sizeChange();
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(headerMiddleWidth,headerMiddleHeight,headerHeight + 100,0,Math.PI*2,true);
+    context.fill();
+    }
+  else if(sm.matches){
+    sizeChange();
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(headerMiddleWidth,headerMiddleHeight,headerHeight-200,0,Math.PI*2,true);
+    context.fill();
+  }else if(md.matches){
+    sizeChange();
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(headerMiddleWidth,headerMiddleHeight,headerHeight -150,0,Math.PI*2,true);
+    context.fill();
+  }
+    else if(mdlg.matches){
+    sizeChange();
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(headerMiddleWidth,headerMiddleHeight,headerHeight -100,0,Math.PI*2,true);
+    context.fill();
+    }
+    else if(xsm.matches){
+    sizeChange();
+    var context = canvas.getContext('2d');
+    context.beginPath();
+    context.fillStyle = "black";
+    context.arc(headerMiddleWidth,headerMiddleHeight,headerHeight -200,0,Math.PI*2,true);
+    context.fill();
+    }
+    }
+  md.addListener(breakPoint);
+  mdlg.addListener(breakPoint);
+  sm.addListener(breakPoint);
+  }
+
+
 
 
 
